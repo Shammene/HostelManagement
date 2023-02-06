@@ -46,6 +46,17 @@
                 app:srcCompat="@drawable/login" />
 
             <EditText
+                android:id="@+id/login_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_editext"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="8dp"
+                android:layout_marginTop="5dp"
+                android:hint="email"
+                android:padding="8dp"
+                android:textColor="@color/black" />
+            <EditText
                 android:id="@+id/login_password"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -57,17 +68,6 @@
                 android:padding="8dp"
                 android:textColor="@color/black" />
 
-            <EditText
-                android:id="@+id/login_email"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/custom_editext"
-                android:drawableLeft="@drawable/ic_baseline_person_24"
-                android:drawablePadding="8dp"
-                android:layout_marginTop="5dp"
-                android:hint="email"
-                android:padding="8dp"
-                android:textColor="@color/black" />
             <Button
                 android:id="@+id/login_button"
                 android:layout_width="match_parent"
@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:padding="8dp"
-                android:text="Not Yet Register? Login"
+                android:text="Not Yet Register? Signup"
                 android:textColor="@color/Lavender"
                 android:textSize="18sp" />
 

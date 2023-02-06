@@ -82,7 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/LoginRedirectText"
-            android:text="Already An User?"
+            android:text="Already An User? login"
             android:layout_gravity="center"
             android:padding="8dp"
             android:textColor="@color/Lavender"
