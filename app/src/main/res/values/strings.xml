@@ -2,4 +2,5 @@
     <string name="app_name">HostelManagement</string>
     <string name="hi_sign_up">hi sign up</string>
     <string name="hi_login">hi login</string>
+    <string name="hello">HelLO</string>
 </resources>
