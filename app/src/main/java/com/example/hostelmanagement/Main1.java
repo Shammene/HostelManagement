@@ -13,13 +13,11 @@ import android.widget.Toast;
 
 import java.util.concurrent.Executor;
 
-public class Main1 extends AppCompatActivity {
+public class Main1 extends AppCompatActivity{
 
     BiometricPrompt biometricPrompt;
     BiometricPrompt.PromptInfo promptInfo;
     ConstraintLayout mMainLayout;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +26,17 @@ public class Main1 extends AppCompatActivity {
         mMainLayout=findViewById(R.id.main_Layout);
 
         BiometricManager biometricManager=BiometricManager.from(this);
-        switch(biometricManager.canAuthenticate())
-        {
+        switch (biometricManager.canAuthenticate()) {
             case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
-                Toast.makeText(getApplicationContext(),"Device Doesnt have fingerprint",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Device Doesnt have fingerprint", Toast.LENGTH_SHORT).show();
                 break;
             case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
-                Toast.makeText(getApplicationContext(),"Not Working",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Not Working", Toast.LENGTH_SHORT).show();
 
             case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
-                Toast.makeText(getApplicationContext(),"No fingerprint Assigned",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "No fingerprint Assigned", Toast.LENGTH_SHORT).show();
+            case BiometricManager.BIOMETRIC_SUCCESS:
+                break;
         }
         Executor executor= ContextCompat.getMainExecutor(this);
 
