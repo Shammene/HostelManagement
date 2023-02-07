@@ -22,8 +22,7 @@ public class Main1 extends AppCompatActivity implements View.OnClickListener {
     BiometricPrompt biometricPrompt;
     BiometricPrompt.PromptInfo promptInfo;
     LinearLayout mMainLayout;
-    Button login,signup;
-    TextView contact;
+    Button login,signup,contact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +34,8 @@ public class Main1 extends AppCompatActivity implements View.OnClickListener {
         contact=findViewById(R.id.contact);
 
         login.setOnClickListener(this);
+        contact.setOnClickListener(this);
+        signup.setOnClickListener(this);
 
         BiometricManager biometricManager=BiometricManager.from(this);
         switch (biometricManager.canAuthenticate()) {
