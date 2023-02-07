@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">HostelManagement</string>
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
     <string name="hi_sign_up">hi sign up</string>
     <string name="hi_login">hi login</string>
     <string name="hello">HelLO</string>
     <string name="image" />
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
