@@ -12,7 +12,6 @@
     android:gravity="center"
     tools:context=".Main1">
 
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="218dp"
@@ -55,4 +54,14 @@
         android:layout_marginTop="5dp"
         android:backgroundTint="@color/Lavender"
         app:cornerRadius="20dp" />
+
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Us"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:textColor="@color/Lavender"
+        android:textSize="18sp"/>
 </LinearLayout>

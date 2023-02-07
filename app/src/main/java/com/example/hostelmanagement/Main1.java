@@ -6,11 +6,13 @@ import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.concurrent.Executor;
@@ -21,7 +23,7 @@ public class Main1 extends AppCompatActivity implements View.OnClickListener {
     BiometricPrompt.PromptInfo promptInfo;
     LinearLayout mMainLayout;
     Button login,signup;
-
+    TextView contact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class Main1 extends AppCompatActivity implements View.OnClickListener {
         mMainLayout=findViewById(R.id.main_Layout);
         login=findViewById(R.id.login);
         signup=findViewById(R.id.signup);
+        contact=findViewById(R.id.contact);
 
         login.setOnClickListener(this);
 
@@ -77,6 +80,10 @@ public class Main1 extends AppCompatActivity implements View.OnClickListener {
             case R.id.signup:
                 Toast.makeText(this,"signup",Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(Main1.this, SignupActivity.class));
+                break;
+            case R.id.contact:
+                Toast.makeText(this,"Contact Us!",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Main1.this, Contact.class));
                 break;
         }
     }
