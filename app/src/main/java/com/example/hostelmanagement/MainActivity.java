@@ -7,28 +7,29 @@ import android.content.Intent;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    public CardView card1, card2, card3, card4;
+    private CardView card1, cardinfo, card3, card4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         card1 = (CardView) findViewById(R.id.cardhome);
-        card2 = (CardView) findViewById(R.id.cardinfo);
+        cardinfo = (CardView) findViewById(R.id.cardinfo);
         card3 = (CardView) findViewById(R.id.cardcomplaint);
         card4 = (CardView) findViewById(R.id.cardnoti);
 
-        card1.setOnClickListener(this);
-        card2.setOnClickListener(this);
-        card3.setOnClickListener(this);
-        card4.setOnClickListener(this);
+        card1.setOnClickListener((View.OnClickListener)this);
+        cardinfo.setOnClickListener((View.OnClickListener)this);
+        card3.setOnClickListener((View.OnClickListener)this);
+        card4.setOnClickListener((View.OnClickListener)this);
     }
 
     @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.cardinfo:
-            startActivity(new Intent(MainActivity.this, Studentprofilepage.class));
+    public void onClick(View v) {
+        Intent i;
+        switch (v.getId()) {
+            case R.id.cardinfo: i=new Intent(this,StudentProfile.class);
+            startActivity(i);
             break;
         }
     }
