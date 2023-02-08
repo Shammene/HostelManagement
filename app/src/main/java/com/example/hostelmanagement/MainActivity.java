@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private CardView card1, cardinfo, card3, card4;
+    private CardView card1, cardinfo, card3, card4, cardhome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,11 +17,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         cardinfo = (CardView) findViewById(R.id.cardinfo);
         card3 = (CardView) findViewById(R.id.cardcomplaint);
         card4 = (CardView) findViewById(R.id.cardnoti);
+        cardhome = (CardView) findViewById(R.id.cardhome);
 
         card1.setOnClickListener((View.OnClickListener)this);
         cardinfo.setOnClickListener((View.OnClickListener)this);
         card3.setOnClickListener((View.OnClickListener)this);
         card4.setOnClickListener((View.OnClickListener)this);
+        cardhome.setOnClickListener((View.OnClickListener)this);
     }
 
     @Override
@@ -31,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.cardinfo: i=new Intent(this,StudentProfile.class);
             startActivity(i);
             break;
+            case R.id.cardhome: i=new Intent(this,RoomDetails.class);
+                startActivity(i);
         }
     }
 }
