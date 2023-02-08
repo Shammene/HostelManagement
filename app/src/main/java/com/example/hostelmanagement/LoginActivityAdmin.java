@@ -26,7 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivityAdmin extends AppCompatActivity {
     private FirebaseAuth auth;
     private EditText loginEmail, loginPassword;
-    private TextView signupRedirectText;
+    private TextView signupRedirectText,HomeRedirectText1;
     private Button loginButton;
     TextView forgotPassword;
 
@@ -42,6 +42,7 @@ public class LoginActivityAdmin extends AppCompatActivity {
         loginPassword = findViewById(R.id.login_password1);
         loginButton = findViewById(R.id.login_button1);
         signupRedirectText = findViewById(R.id.signupRedirectText);
+        HomeRedirectText1 = findViewById(R.id.HomeRedirectText1);
         forgotPassword=findViewById(R.id.forgot_password);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +80,12 @@ public class LoginActivityAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivityAdmin.this, SignupActivity.class));
+            }
+        });
+        HomeRedirectText1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivityAdmin.this, Main1.class));
             }
         });
 

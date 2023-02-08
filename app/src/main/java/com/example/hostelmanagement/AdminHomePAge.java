@@ -31,7 +31,10 @@ public class AdminHomePAge extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         Intent i;
         switch (v.getId()) {
-            case R.id.room: i=new Intent(this,StudentRoomDetails.class);
+            case R.id.room: i=new Intent(this,AdminAssignRoom.class);
+                startActivity(i);
+                break;
+            case R.id.noti: i=new Intent(this,LoginActivityAdmin.class);
                 startActivity(i);
                 break;
         }

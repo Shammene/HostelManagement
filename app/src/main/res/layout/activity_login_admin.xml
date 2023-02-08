@@ -83,8 +83,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:padding="8dp"
                 android:text="Forgot Password"
                 android:textColor="@color/Lavender"
                 android:textSize="16sp" />
@@ -94,8 +92,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:padding="8dp"
                 android:text="Not Yet Register? Signup"
+                android:textColor="@color/Lavender"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/HomeRedirectText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Return to home"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/Lavender"
                 android:textSize="18sp" />
 
