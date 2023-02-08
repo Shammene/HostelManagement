@@ -7,18 +7,18 @@ import android.content.Intent;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private CardView card1, cardinfo, card3, card4;
+    private CardView cardroom, cardinfo, card3, card4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        card1 = (CardView) findViewById(R.id.cardhome);
+        cardroom = (CardView) findViewById(R.id.cardroom);
         cardinfo = (CardView) findViewById(R.id.cardinfo);
         card3 = (CardView) findViewById(R.id.cardcomplaint);
         card4 = (CardView) findViewById(R.id.cardnoti);
 
-        card1.setOnClickListener((View.OnClickListener)this);
+        cardroom.setOnClickListener((View.OnClickListener)this);
         cardinfo.setOnClickListener((View.OnClickListener)this);
         card3.setOnClickListener((View.OnClickListener)this);
         card4.setOnClickListener((View.OnClickListener)this);
@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.cardinfo: i=new Intent(this,StudentProfile.class);
             startActivity(i);
             break;
+            case R.id.cardroom: i=new Intent(this,StudentRoomDetails.class);
+                startActivity(i);
+                break;
         }
     }
 }

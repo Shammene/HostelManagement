@@ -29,18 +29,27 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="200dp"
-        android:layout_height="216dp"
+        android:layout_width="129dp"
+        android:layout_height="138dp"
         android:layout_marginTop="10dp"
         app:srcCompat="@drawable/accomodation" />
 
     <Button
-        android:id="@+id/login"
-        android:text="LOGIN"
+        android:id="@+id/loginStudent"
+        android:text="LOGIN STUDENT"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:textSize="18sp"
         android:layout_marginTop="15dp"
+        android:backgroundTint="@color/Lavender"
+        app:cornerRadius="20dp"/>
+    <Button
+        android:id="@+id/loginAdmin"
+        android:text="LOGIN ADMIN"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
         android:backgroundTint="@color/Lavender"
         app:cornerRadius="20dp"/>
 

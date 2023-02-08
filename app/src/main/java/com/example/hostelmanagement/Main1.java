@@ -19,18 +19,20 @@ public class Main1 extends AppCompatActivity implements View.OnClickListener {
     BiometricPrompt biometricPrompt;
     BiometricPrompt.PromptInfo promptInfo;
     LinearLayout mMainLayout;
-    Button login,signup,contact;
+    Button loginStudent,loginAdmin,signup,contact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main1);
         mMainLayout=findViewById(R.id.main_Layout);
-        login=findViewById(R.id.login);
+        loginStudent=findViewById(R.id.loginStudent);
+        loginAdmin=findViewById(R.id.loginAdmin);
         signup=findViewById(R.id.signup);
         contact=findViewById(R.id.contact);
 
-        login.setOnClickListener(this);
+        loginStudent.setOnClickListener(this);
+        loginAdmin.setOnClickListener(this);
         contact.setOnClickListener(this);
         signup.setOnClickListener(this);
 
@@ -71,9 +73,13 @@ public class Main1 extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.login:
+            case R.id.loginStudent:
                 Toast.makeText(this,"login",Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(Main1.this, LoginActivity.class));
+                break;
+            case R.id.loginAdmin:
+                Toast.makeText(this,"login",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Main1.this, LoginActivityAdmin.class));
                 break;
             case R.id.signup:
                 Toast.makeText(this,"signup",Toast.LENGTH_SHORT).show();
