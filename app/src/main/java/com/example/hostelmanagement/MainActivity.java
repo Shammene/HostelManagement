@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.cardnoti: i=new Intent(this,LoginActivity.class);
                 startActivity(i);
                 break;
+            case R.id.cardcomplaint: i=new Intent(this,complaint_Student.class);
+                startActivity(i);
+                break;
         }
     }
 }
